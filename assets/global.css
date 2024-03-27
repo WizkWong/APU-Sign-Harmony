@@ -7,17 +7,32 @@
   -webkit-text-size-adjust: 100%;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   font-size: 16px;
+  height: 100%;
 }
 
-.center-box {
-  position: fixed;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.flex-box {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-box section {
+  flex-basis: 25%;
+}
+
+.form-box {
+  flex-basis: 50%;
   max-width: 42rem;
+  margin-top: -6em;
   padding: 1.5rem 2rem;
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   border-bottom-width: 1px;
@@ -25,6 +40,7 @@ body {
 
 #input-form .top-header {
   text-align: center;
+  margin: 1rem 0;
 }
 
 #input-form div.header {
