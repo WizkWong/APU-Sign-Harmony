@@ -1,11 +1,16 @@
-const sb = supabase.createClient("https://foujcdpcnytujoakwgtw.supabase.co", SUPABASE_KEY);
+import { createClient } from '@supabase/supabase-js'
+
+const SUPABASE_KEY = import.meta.env.VITE_SUPABASE_KEY;
+const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
+
+const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
 document.getElementById("student-input-form").addEventListener("submit", async (e) => {
     e.preventDefault();
     const name = document.getElementById("name").value;
     const tpnumber = document.getElementById("tpnumber").value;
 
-    const { error } = await sb.from("student").insert({
+    const { error } = await supabase.from("student").insert({
       name: name,
       tp_number: tpnumber,
     });
