@@ -1,7 +1,18 @@
-document.getElementById("student-input-form").addEventListener("submit", (e) => {
+const sb = supabase.createClient("https://foujcdpcnytujoakwgtw.supabase.co", SUPABASE_KEY);
+
+document.getElementById("student-input-form").addEventListener("submit", async (e) => {
     e.preventDefault();
     const name = document.getElementById("name").value;
     const tpnumber = document.getElementById("tpnumber").value;
+
+    const { error } = await sb.from("student").insert({
+      name: name,
+      tp_number: tpnumber,
+    });
+
+    if (error) {
+      console.log(error);
+    }
 
     const prerequisite = document.getElementById("prerequisite");
     prerequisite.hidden = true;
