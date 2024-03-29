@@ -26,6 +26,10 @@ document.getElementById("student-input-form").addEventListener("submit", async (
     main.hidden = false;
   });
 
+const getImageUrl = (name) => {
+  return new URL(`./assets/sign-language/${name}.jpg`, import.meta.url).href;
+}
+
 document.getElementById("sign-language-input-form").addEventListener("submit", (e) => {
     e.preventDefault();
     const alphabet = document.getElementById("alphabet").value;
@@ -33,7 +37,7 @@ document.getElementById("sign-language-input-form").addEventListener("submit", (
     const charsList = alphabet.replace(/[^a-zA-Z]/g, '').split("");
     
     const imgHtml = charsList.reduce((html, c) => 
-      html.concat(`<div><img src="./assets/sign-language/${c}.jpg"/><p>${c.toUpperCase()}</p></div>\n`)
+      html.concat(`<div><img src="${getImageUrl(c)}"/><p>${c.toUpperCase()}</p></div>\n`)
     , "")
 
     const sign_langauge = document.getElementById("sign-language-img");
