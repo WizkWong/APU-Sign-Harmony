@@ -10,47 +10,45 @@
     <script type="module" src="index.js"></script>
   </head>
   <body>
-    <div class="flex-box">
-      <section>
-        <!-- ads with image, title mentioning sponser, with nice design -->
-        <div class="ads">
-          <h1>Our Sponser: <div id="sponser">DM Solution</div></h1>
-          <img src="./assets/ads-landscape.png" />
-        </div>
-        <div class="ads-2">
-          <h1>Our Sponser <div id="sponser">DM Solution</div></h1>
-          <img src="./assets/ads-portrait.png" />
-        </div>
-      </section>
-      <main id="main">
-        <div class="box">
-          <form id="student-input-form" method="dialog">
-            <h1 class="top-header">Get Your Name In Sign Language ✌️</h1>
-            <div class="header">
-              <div class="crop">
-                <img src="./assets/LOGO_APU_SIGN_HARMONY.png" />
-              </div>
-              <h1>APU Sign Harmony</h1>
+    <!-- ads with image, title mentioning sponser, with nice design -->
+    <section class="ads-left">
+      <div class="ads-landscape">
+        <h1>Our Sponser: <br />DM Solution</h1>
+        <img src="./assets/ads-landscape.png" />
+      </div>
+    </section>
+    <section class="ads-portrait">
+      <h1>Our Sponser: <br />DM Solution</h1>
+      <img src="./assets/ads-portrait.png" />
+    </section>
+    <main id="main">
+      <div class="box">
+        <form id="student-input-form" method="dialog">
+          <h1 class="top-header">Get Your Name In Sign Language ✌️</h1>
+          <div class="header">
+            <div class="crop">
+              <img src="./assets/LOGO_APU_SIGN_HARMONY.png" />
             </div>
-            <div class="grid">
-              <label for="name">Name:</label>
-              <input type="text" id="name" required />
-              <label for="tpnumber">TP Number:</label>
-              <input type="text" id="tpnumber" required />
-            </div>
-            <div class="button">
-              <input type="submit" value="Submit" />
-            </div>
-          </form>
-        </div>
-        <div id="sign-language-img" hidden></div>
-      </main>
-      <section>
-        <div class="ads">
-          <h1>Our Sponser: <div id="sponser">DM Solution</div></h1>
-          <img src="./assets/ads-landscape.png" />
-        </div>
-      </section>
-    </div>
+            <h1>APU Sign Harmony</h1>
+          </div>
+          <div class="grid">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required />
+            <label for="tpnumber">TP Number:</label>
+            <input type="text" id="tpnumber" required />
+          </div>
+          <div class="button">
+            <input type="submit" value="Submit" />
+          </div>
+        </form>
+      </div>
+      <div id="sign-language-img" hidden></div>
+    </main>
+    <section class="ads-right">
+      <div class="ads-landscape">
+        <h1>Our Sponser: <br />DM Solution</h1>
+        <img src="./assets/ads-landscape.png" />
+      </div>
+    </section>
   </body>
 </html>

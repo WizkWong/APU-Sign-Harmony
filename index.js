@@ -21,14 +21,14 @@ document.getElementById("student-input-form").addEventListener("submit", async (
     const name = document.getElementById("name").value;
     const tpnumber = document.getElementById("tpnumber").value;
 
-    const { error } = await supabase.from("student").insert({
-      name: name,
-      tp_number: tpnumber,
-    });
+    // const { error } = await supabase.from("student").insert({
+    //   name: name,
+    //   tp_number: tpnumber,
+    // });
 
-    if (error) {
-      console.log(error);
-    }
+    // if (error) {
+    //   console.log(error);
+    // }
 
     const sign_langauge = document.getElementById("sign-language-img");
     
