@@ -32,7 +32,7 @@ document.getElementById("student-input-form").addEventListener("submit", (e) => 
     const name = document.getElementById("name").value;
     const tpnumber = document.getElementById("tpnumber").value;
 
-    if (name.match(/[^a-zA-Z]/g)) {
+    if (name.match(/[^a-zA-Z\s]/g)) {
       alert('Only alphabet (A-Z) are allowed for the "Name" field!');
       return;
     }
